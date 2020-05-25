@@ -2,8 +2,6 @@
 Kirby 3 CMS plugin for converting JPG, JPEG and PNG into much smaller WEBP – speed up your website!
 
 ![kirby3-webp](https://user-images.githubusercontent.com/34959078/82842741-f6450900-9eda-11ea-8f63-1cc3fe1eb5f0.png)
-![kirby3-webp](https://user-images.githubusercontent.com/34959078/82845567-60fb4200-9ee5-11ea-8214-df65ea018f27.gif)
-
 
 ## Installation
 
@@ -93,8 +91,10 @@ You have multiple options when using `kirby3-webp` to configure it to your needs
 | `kirby3-webp.skip`  | Boolean  | `false`  | 	If true, conversion will be skipped (ie for skipping png conversion for some converters)  |
 
 ## Credit
-- (S1SYPHOS/kirby-webp)[https://github.com/S1SYPHOS/kirby-webp]
-- (rosell-dk/webp-convert)[https://github.com/rosell-dk/webp-convert]
-- (getkirby)[https://github.com/getkirby]
+- [S1SYPHOS/kirby-webp](https://github.com/S1SYPHOS/kirby-webp)
+- [rosell-dk/webp-convert](https://github.com/rosell-dk/webp-convert)
+- [getkirby](https://github.com/getkirby)
 
+## How this plugin works
+![kirby3-webp](https://user-images.githubusercontent.com/34959078/82845567-60fb4200-9ee5-11ea-8214-df65ea018f27.gif)
 
