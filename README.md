@@ -83,11 +83,11 @@ You have multiple options when using `kirby3-webp` to configure it to your needs
 
 | Option  | Type  | Default  | Description  |
 |---|---|---|---|
-| `kirby3-webp.quality`  | Integer  | `90`  | See the "Auto quality" section above.  |
+| `kirby3-webp.quality`  | Integer  | `90`  | See the [Auto quality](https://github.com/rosell-dk/webp-convert/blob/master/docs/v2.0/converting/introduction-for-converting.md#auto-quality) section.  |
 | `kirby3-webp.maxQuality`  | Integer  | `85`  | Only relevant for jpegs and when quality is set to "auto".  |
 | `kirby3-webp.defaultQuality`  | Integer  | `85`  |   |
 | `kirby3-webp.metadata`  | Array  | `"none"`  | Valid values: "all", "none", "exif", "icc", "xmp". Note: Currently only cwebp supports all values.<br><br> gd will always remove all metadata. ewww, imagick and gmagick can either strip all, or keep all (they will keep all, unless metadata is set to none)  |
-| `kirby3-webp.encoding`  |  Array |  `"auto"` | See the "Auto selecting between lossless/lossy encoding" section above  |
+| `kirby3-webp.encoding`  |  Array |  `"auto"` | See the [Auto selecting between lossless/lossy encoding](https://github.com/rosell-dk/webp-convert/blob/master/docs/v2.0/converting/introduction-for-converting.md#auto-selecting-between-losslesslossy-encoding) section.  |
 | `kirby3-webp.skip`  | Boolean  | `false`  | 	If true, conversion will be skipped (ie for skipping png conversion for some converters)  |
 
 ## Credit
