@@ -12,7 +12,6 @@ composer require felixhaeberle/kirby3-webp
 ### Git Submodule
 ```
 git submodule add https://github.com/felixhaeberle/kirby3-webp.git site/plugins/kirby3-webp
-
 ```
 ### Clone or download
 1. (Clone)[https://github.com/felixhaeberle/kirby3-webp.git] or (download)[https://github.com/felixhaeberle/kirby3-webp/archive/master.zip] this repository.
