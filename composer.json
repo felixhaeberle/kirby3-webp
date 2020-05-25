@@ -1,0 +1,24 @@
+{
+    "name": "felixhaeberle/kirby3-webp",
+    "description": "This plugin generates WebP images alongside your uploaded JPGs & PNGs.",
+    "type": "kirby-plugin",
+    "require": {
+        "rosell-dk/webp-convert": "^2.3",
+        "getkirby/composer-installer": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "felixhaeberle",
+            "email": "kontakt@felixhaeberle.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "WebP\\": "lib/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
