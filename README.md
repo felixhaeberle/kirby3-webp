@@ -26,6 +26,57 @@ return [
 ```
 
 ## Getting started
+After installing and activating the plugin, you need to **serve webp files to the frontend** woth your server configuration.
+
+### Apache
+Add the following to your `.htaccess`:
+```
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Checking for WebP browser support ..
+  RewriteCond %{HTTP_ACCEPT} image/webp
+
+  # .. and if there's a WebP version for the requested image
+  RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+
+  # Well, then go for it & serve WebP instead
+  RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header append Vary Accept env=REDIRECT_accept
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+```
+
+### NGINX
+For NGINX, use the following virtual host configuration:
+```
+// First, make sure that NGINX' `mime.types` file includes 'image/webp webp'
+include /etc/nginx/mime.types;
+
+// Checking if HTTP's `ACCEPT` header contains 'webp'
+map $http_accept $webp_suffix {
+  default "";
+  "~*webp" ".webp";
+}
+
+server {
+  // ...
+
+  // Checking if there's a WebP version for the requested image ..
+  location ~* ^.+\.(jpe?g|png)$ {
+    add_header Vary Accept;
+    // .. and if so, serving it
+    try_files $1$webp_ext $uri =404;
+  }
+}
+```
+
 
 ## Options
 You have multiple options when using `kirby3-webp` to configure it to your needs
@@ -38,5 +89,10 @@ You have multiple options when using `kirby3-webp` to configure it to your needs
 | `kirby3-webp.metadata`  | Array  | `"none"`  | Valid values: "all", "none", "exif", "icc", "xmp". Note: Currently only cwebp supports all values.<br><br> gd will always remove all metadata. ewww, imagick and gmagick can either strip all, or keep all (they will keep all, unless metadata is set to none)  |
 | `kirby3-webp.encoding`  |  Array |  `"auto"` | See the "Auto selecting between lossless/lossy encoding" section above  |
 | `kirby3-webp.skip`  | Boolean  | `false`  | 	If true, conversion will be skipped (ie for skipping png conversion for some converters)  |
+
+## Credit
+- (S1SYPHOS/kirby-webp)[https://github.com/S1SYPHOS/kirby-webp]
+- (rosell-dk/webp-convert)[https://github.com/rosell-dk/webp-convert]
+- (getkirby)[https://github.com/getkirby]
 
 
