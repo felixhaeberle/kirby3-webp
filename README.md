@@ -2,7 +2,7 @@
 ![license](https://img.shields.io/github/license/felixhaeberle/kirby3-webp)
 ![issues-open](https://img.shields.io/github/issues/felixhaeberle/kirby3-webp)
 ![tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Ffelixhaeberle%2Fkirby3-webp)
-Kirby 3 CMS plugin for converting JPG, JPEG and PNG into much smaller WEBP – speed up your website!
+<br>Kirby 3 CMS plugin for converting JPG, JPEG and PNG into much smaller WEBP – speed up your website!
 
 ![kirby3-webp](https://user-images.githubusercontent.com/34959078/82842741-f6450900-9eda-11ea-8f63-1cc3fe1eb5f0.png)
 
