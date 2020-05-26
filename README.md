@@ -21,7 +21,7 @@ git submodule add https://github.com/felixhaeberle/kirby3-webp.git site/plugins/
 2. Unzip / Move the folder to `site/plugins`.
 
 ### Activate the plugin
-Activate the plugin in the `config-php` file with `kirby3-webp => true`.
+Activate the plugin in the `site/config/config.php` file with `kirby3-webp => true`.
 ```
 return [
   'kirby3-webp' => true
@@ -29,7 +29,7 @@ return [
 ```
 
 ## Getting started
-After installing and activating the plugin, you need to **serve webp files to the frontend** woth your server configuration.
+After installing and activating the plugin, you need to **serve webp files to the frontend** with your server configuration.
 
 ### Apache
 Add the following to your `.htaccess`:
@@ -82,7 +82,7 @@ server {
 
 
 ## Options
-You have multiple options when using `kirby3-webp` to configure it to your needs
+You have multiple options when using `kirby3-webp` to configure it to your needs:
 
 | Option  | Type  | Default  | Description  |
 |---|---|---|---|
