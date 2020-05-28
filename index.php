@@ -10,5 +10,10 @@ Kirby::plugin('felixhaeberle/kirby3-webp', [
                 (new WebP\Convert)->generateWebP($file);
             }
         },
+        'file.replace:after' => function ($newFile, $oldFile) {
+            if ($this->option('kirby3-webp', false)) {
+                (new WebP\Convert)->generateWebP($newFile);
+            }
+        },
     ],
 ]);
