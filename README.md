@@ -6,6 +6,7 @@
 
 <img width="50%" src="https://user-images.githubusercontent.com/34959078/82842741-f6450900-9eda-11ea-8f63-1cc3fe1eb5f0.png"/>
 <img width="50%" src="https://user-images.githubusercontent.com/34959078/83130175-332d1d80-a0de-11ea-850f-1fe8abc36e83.gif"/>
+... and get the Lighthouse statistic you are dreaming of! 😍
 
 ## 🥁 Installation
 
