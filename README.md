@@ -2,11 +2,11 @@
 ![license](https://img.shields.io/github/license/felixhaeberle/kirby3-webp)
 ![issues-open](https://img.shields.io/github/issues/felixhaeberle/kirby3-webp)
 ![tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Ffelixhaeberle%2Fkirby3-webp)
-<br><br>Kirby 3 CMS plugin for converting JPG, JPEG and PNG into much smaller WEBP – speed up your website!
+<br><br>Kirby 3 CMS plugin for converting **JPG**, **JPEG** and **PNG** into much smaller **WEBP** – speed up your website! 🚀🔥<br>
 
 <img width="50%" src="https://user-images.githubusercontent.com/34959078/82842741-f6450900-9eda-11ea-8f63-1cc3fe1eb5f0.png"/>
 
-## Installation
+## 🥁 Installation
 
 ### Composer
 ```
@@ -20,7 +20,7 @@ git submodule add https://github.com/felixhaeberle/kirby3-webp.git site/plugins/
 1. [Clone](https://github.com/felixhaeberle/kirby3-webp.git) or [download](https://github.com/felixhaeberle/kirby3-webp/archive/master.zip) this repository.
 2. Unzip / Move the folder to `site/plugins`.
 
-### Activate the plugin
+## 1️⃣ Activate the plugin
 Activate the plugin in the `site/config/config.php` file with `kirby3-webp => true`.
 ```
 return [
@@ -28,7 +28,7 @@ return [
 ]
 ```
 
-## Getting started
+## 2️⃣ Getting started
 After installing and activating the plugin, you need to **serve webp files to the frontend** with your server configuration.
 
 ### Apache
@@ -81,7 +81,7 @@ server {
 ```
 
 
-## Options
+## ⚙️ Options
 You have multiple options when using `kirby3-webp` to configure it to your needs:
 
 | Option  | Type  | Default  | Description  |
@@ -93,11 +93,11 @@ You have multiple options when using `kirby3-webp` to configure it to your needs
 | `kirby3-webp.encoding`  |  Array |  `"auto"` | See the [Auto selecting between lossless/lossy encoding](https://github.com/rosell-dk/webp-convert/blob/master/docs/v2.0/converting/introduction-for-converting.md#auto-selecting-between-losslesslossy-encoding) section.  |
 | `kirby3-webp.skip`  | Boolean  | `false`  | 	If true, conversion will be skipped (ie for skipping png conversion for some converters)  |
 
-## Credit
+## 👏 Credit
 - [S1SYPHOS/kirby-webp](https://github.com/S1SYPHOS/kirby-webp)
 - [rosell-dk/webp-convert](https://github.com/rosell-dk/webp-convert)
 - [getkirby](https://github.com/getkirby)
 
-## How this plugin works
+## 🤩 How this plugin works
 ![kirby3-webp](https://user-images.githubusercontent.com/34959078/82845567-60fb4200-9ee5-11ea-8214-df65ea018f27.gif)
 
