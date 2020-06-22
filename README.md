@@ -103,3 +103,6 @@ You have multiple options when using `kirby3-webp` to configure it to your needs
 ## 🤩  How this plugin works
 ![kirby3-webp](https://user-images.githubusercontent.com/34959078/82845567-60fb4200-9ee5-11ea-8214-df65ea018f27.gif)
 
+## 🤯  Good to know
+Sometimes, if the pictures are really big (multiple MB's) the converting process takes naturally longer, but does complete for sure. The .webp gets generated, but not selected, because if the client can accept .webp, the .webp is sent to the client instead of the .png, .jpeg or .jpg. Therefore, you are in need of the Apache/nginx configuration.
+
