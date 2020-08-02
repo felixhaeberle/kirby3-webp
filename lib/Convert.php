@@ -31,7 +31,7 @@ class Convert
             // Checking file type since only images are processed
             if ($file->type() == 'image') {
                 // WebPConvert options
-                $path = kirby()->root('content') . '/' . dirname($file->id()) . '/';
+                $path = $file->contentFileDirectory() . '/';
                 $input = $path . $file->filename();
                 $output = $path . $file->name() . '.webp';
 
