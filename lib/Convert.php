@@ -23,13 +23,14 @@ class Convert
         $this->metadata = kirby()->option('kirby3-webp.metadata', "none");
         $this->encoding = kirby()->option('kirby3-webp.encoding', "auto");
         $this->skip = kirby()->option('kirby3-webp.skip', false);
+        $this->supportedFileExtensions = kirby()->option('kirby3-webp.supportedFileExtensions', '.*');
     }
 
     public function generateWebP($file)
     {
         try {
             // Checking file type since only images are processed
-            if ($file->type() == 'image') {
+            if ($file->type() == 'image' && preg_match('/^'.$this->supportedFileExtensions.'$/i', $file->extension())) {
                 // WebPConvert options
                 $path = $file->contentFileDirectory() . '/';
                 $input = $path . $file->filename();
