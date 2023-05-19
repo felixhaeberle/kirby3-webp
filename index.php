@@ -15,5 +15,15 @@ Kirby::plugin('felixhaeberle/kirby3-webp', [
                 (new WebP\Convert)->generateWebP($newFile);
             }
         },
+        'file.delete:after' => function ($file) {
+            $webpFile = dirname($file->root()) . '/' . $file->name() . '.webp';
+            $webpTxtFile = dirname($file->root()) . '/' . $file->name() . '.webp.txt';
+            if (F::exists($webpFile)) {
+                F::remove($webpFile);
+            }
+            if (F::exists($webpTxtFile)) {
+                F::remove($webpTxtFile);
+            }
+        },
     ],
 ]);
