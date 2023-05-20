@@ -29,7 +29,7 @@ class Convert
     {
         try {
             // Checking file type since only images are processed
-            if ($file->type() == 'image') {
+            if (in_array($file->extension(), ['jpg', 'jpeg', 'png'])) {
                 // WebPConvert options
                 $path = $file->contentFileDirectory() . '/';
                 $input = $path . $file->filename();

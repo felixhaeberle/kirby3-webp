@@ -4,7 +4,7 @@
 @include_once __DIR__ . '/src/webp.php';
 
 function shouldGenerateWebP($file) {
-    return $file->kirby()->option('kirby3-webp', false) && $file->extension() !== 'svg';
+    return $file->kirby()->option('kirby3-webp', false);
 }
 
 function generateWebP($file) {
