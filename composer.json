@@ -1,24 +1,54 @@
 {
     "name": "felixhaeberle/kirby3-webp",
-    "description": "Kirby 3 CMS plugin for converting JPG, JPEG and PNG into much smaller WEBP – speed up your website!",
+    "description": "WebP & AVIF for Kirby — automatic companion files on upload, responsive <picture> helpers and CLI bulk conversion. Compatible with Kirby 4 and Kirby 5.",
     "type": "kirby-plugin",
-    "require": {
-        "rosell-dk/webp-convert": "^2.3",
-        "getkirby/composer-installer": "^1.1"
-    },
     "license": "MIT",
+    "keywords": [
+        "kirby",
+        "kirby-plugin",
+        "webp",
+        "avif",
+        "images",
+        "performance"
+    ],
     "authors": [
         {
-            "name": "felixhaeberle",
+            "name": "Felix Haeberle",
             "email": "kontakt@felixhaeberle.de"
         }
     ],
+    "require": {
+        "php": ">=8.1",
+        "getkirby/composer-installer": "^1.2"
+    },
+    "require-dev": {
+        "getkirby/cms": "^5.0",
+        "phpunit/phpunit": "^10.5"
+    },
+    "suggest": {
+        "rosell-dk/webp-convert": "Converter stack (cwebp, vips, imagick, gd) used automatically for WebP when installed — useful on servers whose GD lacks WebP support",
+        "getkirby/cli": "Enables the kirby webp:generate and kirby webp:clean commands"
+    },
     "autoload": {
         "psr-4": {
-            "WebP\\": "lib/"
+            "FelixHaeberle\\Webp\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "FelixHaeberle\\Webp\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        }
+    },
+    "extra": {
+        "kirby-cms-path": false
     }
 }

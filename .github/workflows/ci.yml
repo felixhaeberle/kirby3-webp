@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    name: PHP ${{ matrix.php }} / Kirby ${{ matrix.kirby }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { php: '8.1', kirby: '^4.0' }
+          - { php: '8.2', kirby: '^4.0' }
+          - { php: '8.2', kirby: '^5.0' }
+          - { php: '8.3', kirby: '^5.0' }
+          - { php: '8.4', kirby: '^5.0' }
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: gd
+          coverage: none
+
+      - name: Pin Kirby version
+        run: composer require --dev --no-update "getkirby/cms:${{ matrix.kirby }}"
+
+      - name: Install dependencies
+        run: composer update --prefer-dist --no-progress
+
+      - name: Run tests
+        run: vendor/bin/phpunit

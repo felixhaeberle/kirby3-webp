@@ -1,4 +1,8 @@
 composer.lock
+/vendor
+/.phpunit.cache
+/tests/tmp
+
 .DS_Store
 .DS_Store?
 ._*
