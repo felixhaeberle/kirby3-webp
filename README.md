@@ -1,3 +1,5 @@
+
+
 # kirby-webp
 
 ![license](https://img.shields.io/github/license/felixhaeberle/kirby3-webp)
@@ -198,7 +200,7 @@ All options live under the `felixhaeberle.kirby3-webp` namespace:
 | `skipLarger` | `true` | Drop companions that turn out larger than the original |
 | `minSize` | `0` | Skip files smaller than this (bytes) |
 | `engine` | `'auto'` | `auto` / `kirby` (thumb driver) / `webp-convert` (rosell-dk library) |
-| `srcset` | `[400, 800, 1200, 1600, 2000]` | Default width ladder for `picture()` |
+| `srcset` | `[400, 800, 1200, 1600, 2000]` | Default width ladder for `picture()` (override per call with `'widths'`) |
 | `sizes` | `'100vw'` | Default `sizes` attribute for `picture()` |
 | `webpConvert` | `[]` | Extra options passed through to rosell-dk/webp-convert |
 
